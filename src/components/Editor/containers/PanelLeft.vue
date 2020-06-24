@@ -16,13 +16,19 @@
 </style>
 
 <template>
-  <CardBox class="panel-left" placement="left" position="right" :width="250" @expand="toggleHandler">
-    <CardItem :title="$t('L10100')" :enableFold="true" :bold="true">
+  <CardBox class="panel-left" placement="left" position="right" :width="250" :title="$t('L10300')" @expand="toggleHandler">
+    <CardItem
+      v-for="(item, index) in materials"
+      :key="index"
+      :title="$t(item.lang) || item.label"
+      :enableFold="true"
+      :bold="true"
+    >
       <NodeElement
-        v-for="(item, index) in materials.filter(target => target.enable)"
-        :key="index"
-        :title="item.label"
-        :info="item"
+        v-for="(child, childIndex) in item.children.filter(target => target.enable)"
+        :key="childIndex"
+        :title="child.label"
+        :info="child"
       >
       </NodeElement>
     </CardItem>
@@ -44,8 +50,11 @@
       NodeElement
     },
     data () {
-      return {
-        materials: config.materials || []
+      return {}
+    },
+    computed: {
+      materials () {
+        return config && Array.isArray(config.materials) ? config.materials.filter(item => item.enable) : []
       }
     },
     methods: {

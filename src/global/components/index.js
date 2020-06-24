@@ -9,34 +9,6 @@ import {
   MenuItem,
   Tooltip,
   Divider,
-  ColorPicker,
-  InputNumber,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
-  Icon,
-  Message,
-  Modal,
-  Input,
-  Form,
-  FormItem,
-  Slider,
-  Select,
-  Option
-} from 'iview'
-
-import { Sketch } from 'vue-color'
-
-import XIcon from './Icon/Index'
-import XTooltip from './Tooltip/Index'
-
-const obj = {
-  // ui组件
-  Menu,
-  MenuItem,
-  Tooltip,
-  Divider,
-  ColorPicker,
   InputNumber,
   Dropdown,
   DropdownMenu,
@@ -50,11 +22,43 @@ const obj = {
   Slider,
   Select,
   Option,
+  Button
+} from 'iview'
+
+import { Sketch } from 'vue-color'
+
+import XIcon from './Icon/Index'
+import XTooltip from './Tooltip/Index'
+import XDivider from './Divider/Index'
+import XColorPicker from './ColorPicker/Index'
+
+const obj = {
+  // ui组件
+  Menu,
+  MenuItem,
+  Tooltip,
+  Divider,
+  InputNumber,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Icon,
+  Message,
+  Modal,
+  Input,
+  Form,
+  FormItem,
+  Slider,
+  Select,
+  Option,
+  Button,
   // 颜色选择器
   SketchPicker: Sketch,
   // 自定义组件
   XIcon,
-  XTooltip
+  XTooltip,
+  XDivider,
+  XColorPicker
 }
 
 const components = {}

@@ -1,7 +1,7 @@
 /**
  * Created by OXOYO on 2019/5/29.
  *
- *
+ * 语言包
  */
 // 导入iview语言包
 import _en from 'iview/dist/locale/en-US'
@@ -17,8 +17,8 @@ export default {
     'en-US': 'English'
   },
   icon: {
-    'zh-CN': require('../assets/images/langs/zh-CN.png'),
-    'en-US': require('../assets/images/langs/en-US.png')
+    'zh-CN': require('@/assets/images/langs/zh-CN.png'),
+    'en-US': require('@/assets/images/langs/en-US.png')
   },
   data: {
     'zh-CN': { ..._zh, ...zh },

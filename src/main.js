@@ -10,6 +10,13 @@ import components from './global/components'
 import config from './config'
 import './assets/styles/main.less'
 
+import XHighlight from 'x-highlight'
+import 'x-highlight/dist/css/XHighlight.css'
+// highlight theme
+import 'highlight.js/styles/zenburn.css'
+
+import vClickOutside from 'v-click-outside'
+
 // Vue 全局配置
 let isDev = process && process.env.NODE_ENV !== 'production'
 Vue.config.debug = isDev
@@ -29,6 +36,9 @@ const i18nInstance = i18n(Vue, 'zh-CN')
 
 // 注册全局组件
 Vue.use(components)
+Vue.use(XHighlight)
+// 注册指令
+Vue.use(vClickOutside)
 
 new Vue({
   i18n: i18nInstance,
